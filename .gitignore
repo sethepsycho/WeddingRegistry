@@ -1,0 +1,48 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# next.js
+/.next/
+/out/
+next-env.d.ts
+
+# production
+/build
+
+# environment variables
+.env
+.env*.local
+
+# prisma
+/prisma/*.db
+/prisma/*.db-journal
+
+# local self-contained database (created by the launcher)
+/.localdb
+
+# misc
+.DS_Store
+*.pem
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+
+# editors
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# local Claude Code per-developer settings
+.claude/settings.local.json
+
+# local build tooling (not part of the template)
+.mcp.json
+/qwen-director-mcp/

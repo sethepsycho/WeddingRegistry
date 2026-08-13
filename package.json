@@ -1,0 +1,42 @@
+{
+  "name": "wedding-registry",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A self-hostable, open-source wedding registry template. Guests claim gifts; couples privately decide gift vs. cash per item.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "prisma generate && prisma db push --skip-generate && next build",
+    "start": "next start",
+    "postinstall": "prisma generate",
+    "db:push": "prisma db push",
+    "db:seed": "prisma db seed",
+    "db:blank": "node scripts/blank-db.mjs",
+    "db:studio": "prisma studio"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.2.1",
+    "bcryptjs": "^2.4.3",
+    "next": "^15.1.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "optionalDependencies": {
+    "@vercel/blob": "^0.27.0",
+    "embedded-postgres": "^18.4.0-beta.17",
+    "resend": "^4.0.0",
+    "stripe": "^17.5.0"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^22.10.5",
+    "@types/react": "^19.0.4",
+    "@types/react-dom": "^19.0.2",
+    "prisma": "^6.2.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
